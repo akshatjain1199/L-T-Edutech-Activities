@@ -1,3 +1,4 @@
-select * from building where owner_name =  'Muzzammil'  and owner_name = 'Nicholas'
+select * from building where owner_name =  'Muzzammil'
 union
-select * from building order by owner_name , email_address asc;
+select * from building where owner_name = 'Nicholas'
+order by owner_name , email_address asc;
