@@ -1,15 +1,24 @@
 import java.util.*;
-public class Main{
-    public static void main(String[] args){
-    System.out.println("Enter the total number of people");	     
-    Scanner scn= new Scanner(System.in);
-    int totalpeople = scn.nextInt();
+import java.io.*;
 
- int  day1=(2*totalpeople)/7 ;
- int   day2= day1*2;
-    int day3= day1/2;
-    System.out.println("Number of attendees on day 1 : "+day1);
-    System.out.println("Number of attendees on day 2 : "+day2);
-    System.out.println("Number of attendees on day 3 : "+day3);
-    }
+class Main{
+	public static void main(String[] args) throws Exception{ 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter branding expenses");
+		int branding = sc.nextInt();
+		System.out.println("Enter travel expenses");
+		int travel = sc.nextInt();
+		System.out.println("Enter food expenses");
+		int food = sc.nextInt();
+		System.out.println("Enter logistics expenses");
+		int logistics = sc.nextInt();
+		
+		double total_expenses = (branding+travel+food+logistics);
+		System.out.println("Total expenses: Rs."+(String.format("%.2f",total_expenses)));
+		System.out.println("Branding expenses percentage: "+(String.format("%.2f",(branding/total_expenses)*100)+"%"));
+		System.out.println("Travel expenses percentage: "+(String.format("%.2f",(travel/total_expenses)*100)+"%"));
+		System.out.println("Food expenses percentage: "+(String.format("%.2f",(food/total_expenses)*100)+"%"));
+		System.out.println("Logistics expenses percentage: "+(String.format("%.2f",(logistics/total_expenses)*100)+"%"));
+
+	}
 }
