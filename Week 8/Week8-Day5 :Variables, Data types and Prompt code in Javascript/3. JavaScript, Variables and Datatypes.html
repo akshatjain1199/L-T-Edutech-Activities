@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2 >Please input a number.</h2>
+        <input type="text" id="demo" >
+        <button id="click" type="submit" onclick="check()">Click Me!</button>
+         <h2 id="result"></h2>
+        <script>
+            function check(){
+                var input=document.getElementById("demo").value
+                if(isNaN(input)){
+                    document.getElementById("result").innerHTML="Not Numeric"
+                }else{
+                      document.getElementById("result").innerHTML="Numeric"
+                }
+            }
+        </script>
+    </body>
+</html>   
