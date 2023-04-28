@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Text Color on Hover</title>
+	<style>
+		#p1 {
+			color: #000000;
+		}
+	</style>
+	<script>
+		function red() {
+			document.getElementById("p1").style.color = "#ff0000";
+		}
+
+		function yellow() {
+			document.getElementById("p1").style.color = "#ffff00";
+		}
+	</script>
+</head>
+<body>
+	<p id="p1" onmouseover="red()" onmouseout="yellow()">HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup based pattern to it. HTML5 is the fifth and current major version of HTML
+
+</p>
+</body>
+</html>
