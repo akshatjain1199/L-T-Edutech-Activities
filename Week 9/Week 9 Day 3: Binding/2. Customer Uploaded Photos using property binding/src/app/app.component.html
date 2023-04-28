@@ -1,0 +1,6 @@
+<div>
+  <h2 id="pictures">{{ photosHeading }}</h2>
+  <div *ngFor="let photo of photos">
+    <img [src]="photo.url" [id]="photo.id">
+  </div>
+</div>
