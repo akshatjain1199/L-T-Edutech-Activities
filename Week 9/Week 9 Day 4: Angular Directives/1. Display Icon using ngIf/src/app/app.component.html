@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+<div class="header">
+    <img src="assets/images/header.jpg" size="width:1000px;"/>
+    <div class="top-centered">
+      <h1 style="font-family: 'Dancing Script', cursive;" id="heading">Gadget Wall</h1>
+    </div>
+</div>
+<div class="body">
+
+<div class="card" style="width: 18rem;" *ngFor="let product of productList; let i = index">
+<div class="card-body">
+
+    <!--Fill your code here-->
+    <img *ngIf="product.instantDelivery===1" src="/assets/images/.InsDelivery.png" [id]="'inst-delivery'+product.id"> 
+    <p  [id]="'product-name'+product.id">{{product.name}}</p>
+    <img [id]="'image'+product.id" [src]="product.imageUrl">
+    <p  [id]="'price' + product.id">${{product.price}}</p>
+    <button *ngIf="product.stock===0">Out of Stock</button>
+    <button *ngIf="product.stock>0">Buy</button>
+
+</div>
+</div>
