@@ -1,0 +1,9 @@
+<div *ngFor="let u of users">
+    <mat-card class="card">
+        <img [src]="u.profileImage" class="user-img">
+        <p class="name">{{u.name}}</p>
+        <p class="dob">DOB : {{u.dateOfBirth}}</p>
+        <p class="mobile">Phone : {{u.mobileNumber}}</p>
+        <p class="location">Location : {{u.location}}</p>
+    </mat-card>
+</div>
